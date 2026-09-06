@@ -1,0 +1,18 @@
+# AKKOUS — Digital Studio
+
+AKKOUS is a digital studio that builds websites, booking systems, business
+automations, prospecting workflows and digital design for companies that want
+to operate and grow online.
+
+- Website: https://www.akkous.com/
+- Services: Websites · Booking Systems · Business Automation · Prospecting Automation · Digital Design & Marketing
+
+## Services
+- Website Creation — custom, performant business websites.
+- Booking Systems — online scheduling, calendar and appointment flows.
+- Business Automation — repetitive processes automated end to end.
+- Prospecting Automation — lead capture, qualification and follow-up workflows.
+- Digital Design & Marketing — brand and marketing design.
+
+## Contact
+- WhatsApp: https://www.akkous.com/#start (use the on-site "Talk to Akkous" button)

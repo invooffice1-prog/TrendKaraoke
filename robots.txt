@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Assets are safe to fetch for previews
+Allow: /assets/
+
+# sitemap
+Sitemap: https://www.akkous.com/sitemap.xml

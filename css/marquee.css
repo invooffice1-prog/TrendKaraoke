@@ -1,0 +1,49 @@
+/* ============================================================
+   AKKOUS — Marquee Band
+   ============================================================ */
+.marquee {
+  position: relative;
+  padding: 22px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--bg-2);
+}
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee::before { left: 0; background: linear-gradient(90deg, var(--bg-2), transparent); }
+.marquee::after { right: 0; background: linear-gradient(-90deg, var(--bg-2), transparent); }
+
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  white-space: nowrap;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__track span {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: .02em;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.marquee__track i {
+  color: var(--faint);
+  font-size: 13px;
+  font-style: normal;
+}
+@keyframes marquee { to { transform: translateX(-50%); } }

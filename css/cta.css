@@ -1,0 +1,109 @@
+/* ============================================================
+   AKKOUS — CTA / Start Section
+   ============================================================ */
+.cta {
+  position: relative;
+  padding: 140px 0;
+  overflow: hidden;
+  background: var(--bg-2);
+  border-top: 1px solid var(--line-soft);
+  text-align: center;
+}
+.cta__glow {
+  position: absolute;
+  left: 50%;
+  bottom: -320px;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(99,102,241,.28),
+    rgba(34,211,238,.1) 55%,
+    transparent 72%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+}
+.cta__particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.cta__inner { position: relative; z-index: 2; }
+
+.cta__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(42px, 6.4vw, 84px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-bottom: 26px;
+}
+.cta__title em {
+  font-style: normal;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cta__text {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 48px;
+  font-size: 16.5px;
+}
+
+/* Flow diagram */
+.cta__flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+}
+.cta__flow-step {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  padding: 12px 22px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.cta__flow-step--idea { color: var(--cyan); border-color: rgba(34,211,238,.35); }
+.cta__flow-step--akkous {
+  background: var(--grad);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--shadow-btn) rgba(99,102,241,.55);
+}
+.cta__flow-step--solution { color: var(--violet); border-color: rgba(139,92,246,.4); }
+.cta__flow-arrow { color: var(--faint); display: flex; align-items: center; }
+.cta__flow-arrow svg { width: 20px; height: 20px; }
+
+.cta__actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* Flow step entrance animation */
+.cta__flow-step { animation: flowStepIn .7s var(--ease) both; }
+.cta__flow-step:nth-child(1) { animation-delay: .2s; }
+.cta__flow-step:nth-child(3) { animation-delay: .4s; }
+.cta__flow-step:nth-child(5) { animation-delay: .6s; }
+.cta__flow-step:nth-child(7) { animation-delay: .8s; }
+@keyframes flowStepIn {
+  from { opacity: 0; transform: translateY(16px); }
+}
+
+/* CTA button pulse */
+.cta__actions .btn--primary { animation: ctaPulse 3.2s ease-in-out infinite; }
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: var(--shadow-btn) rgba(99,102,241,.55); }
+  50% { box-shadow: 0 8px 44px -6px rgba(99,102,241,.85), 0 0 0 6px rgba(99,102,241,.08); }
+}

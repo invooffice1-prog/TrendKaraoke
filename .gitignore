@@ -1,0 +1,12 @@
+# GEIN
+Thumbs.db
+Desktop.ini
+
+# Node / QA (dépendances locales installées hors dépôt)
+node_modules/
+
+# Fichiers générés lors des tests QA (hors dépôt)
+*.log
+
+# OS
+.DS_Store

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AKKOUS — Websites, Booking Systems & Automation | Digital Studio</title>
+<meta name="description" content="AKKOUS builds business websites, booking systems, automations and prospecting workflows — professional digital design that helps your company operate and grow online." />
+
+<link rel="canonical" href="https://www.akkous.com/" />
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="theme-color" content="#05070d" />
+<meta name="author" content="AKKOUS" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="AKKOUS" />
+<meta property="og:title" content="AKKOUS — Websites, Booking Systems & Automation | Digital Studio" />
+<meta property="og:description" content="AKKOUS builds business websites, booking systems, automations and prospecting workflows — professional digital design that helps your company operate and grow online." />
+<meta property="og:url" content="https://www.akkous.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content="https://www.akkous.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="AKKOUS — Digital Studio: websites, booking systems and automation" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AKKOUS — Websites, Booking Systems & Automation | Digital Studio" />
+<meta name="twitter:description" content="AKKOUS builds business websites, booking systems, automations and prospecting workflows — professional digital design that helps your company operate and grow online." />
+<meta name="twitter:image" content="https://www.akkous.com/assets/og-image.png" />
+<meta name="twitter:site" content="@akkous" />
+
+<!-- Structured data: Organization + WebSite + WebPage (real, verifiable info only) -->
+<script type="application/ld+json" data-seo>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.akkous.com/#organization",
+      "name": "AKKOUS",
+      "legalName": "AKKOUS",
+      "url": "https://www.akkous.com/",
+      "logo": "https://www.akkous.com/assets/og-image.png",
+      "description": "AKKOUS builds business websites, booking systems, automations and prospecting workflows — professional digital design that helps your company operate and grow online.",
+      "knowsAbout": ["Websites", "Booking systems", "Business automation", "Digital design", "Prospecting workflows"],
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.akkous.com/#website",
+      "url": "https://www.akkous.com/",
+      "name": "AKKOUS",
+      "description": "AKKOUS builds business websites, booking systems, automations and prospecting workflows — professional digital design that helps your company operate and grow online.",
+      "inLanguage": ["en", "fr", "es"],
+      "publisher": { "@id": "https://www.akkous.com/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.akkous.com/#webpage",
+      "url": "https://www.akkous.com/",
+      "name": "AKKOUS — Websites, Booking Systems & Automation | Digital Studio",
+      "description": "AKKOUS builds business websites, booking systems, automations and prospecting workflows — professional digital design that helps your company operate and grow online.",
+      "isPartOf": { "@id": "https://www.akkous.com/#website" },
+      "about": { "@id": "https://www.akkous.com/#organization" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+<script>
+  /* Set the document language before render to avoid an English flash
+     when a non-default language is stored (FOUC mitigation). */
+  (function () {
+    try {
+      var lang = localStorage.getItem("akkous-language");
+      if (lang === "fr" || lang === "es") document.documentElement.lang = lang;
+    } catch (e) {}
+  })();
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- CSS Modules — each file has a single responsibility -->
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/buttons.css" />
+<link rel="stylesheet" href="css/nav.css" />
+<link rel="stylesheet" href="css/hero.css" />
+<link rel="stylesheet" href="css/marquee.css" />
+<link rel="stylesheet" href="css/services.css" />
+<link rel="stylesheet" href="css/website-preview.css" />
+<link rel="stylesheet" href="css/booking.css" />
+<link rel="stylesheet" href="css/workflows.css" />
+<link rel="stylesheet" href="css/design.css" />
+<link rel="stylesheet" href="css/cta.css" />
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<link rel="stylesheet" href="css/modal.css" />
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo" aria-label="AKKOUS home" data-i18n-aria-label="nav.homeAria">AKKOUS<span class="nav__logo-dot">.</span></a>
+    <nav class="nav__links" aria-label="Main navigation" data-i18n-aria-label="nav.mainAria">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#start" data-i18n="nav.start">Start</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Change language" data-i18n-aria-label="lang.label">
+      <button class="lang-switch__btn" type="button" data-lang="en" aria-label="English" title="English" aria-pressed="true">EN</button>
+      <button class="lang-switch__btn" type="button" data-lang="fr" aria-label="Français" title="Français" aria-pressed="false">FR</button>
+      <button class="lang-switch__btn" type="button" data-lang="es" aria-label="Español" title="Español" aria-pressed="false">ES</button>
+    </div>
+    <a href="#start" class="btn btn--sm nav__cta js-open-modal" data-i18n="buttons.startProject">Start a Project</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" data-i18n-aria-label="nav.openMenu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+      <a href="#services" class="mobile-menu__link" data-i18n="nav.services">Services</a>
+      <a href="#start" class="mobile-menu__link" data-i18n="nav.start">Start</a>
+    </nav>
+    <a href="#start" class="btn mobile-menu__cta js-open-modal" data-i18n="buttons.startProject">Start a Project</a>
+</div>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" aria-label="Introduction" data-i18n-aria-label="hero.introAria">
+  <video class="hero__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+    <source src="assets/akkous.mp4" type="video/mp4" />
+  </video>
+  <div class="hero__video-veil" aria-hidden="true"></div>
+  <div class="hero__grid-bg" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+  <canvas class="hero__particles" id="heroParticles" aria-hidden="true"></canvas>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <div class="hero__label reveal">
+        <span class="hero__label-dot" aria-hidden="true"></span> <span data-i18n="hero.label">DIGITAL STUDIO — SYSTEMS &amp; AUTOMATION</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__line reveal" data-i18n="hero.titleLine1">Websites &amp; systems.</span>
+        <span class="hero__line reveal hero__accent" data-i18n="hero.titleLine2">Built to move faster.</span>
+      </h1>
+      <p class="hero__sub reveal" data-i18n="hero.sub">
+        We create high-quality websites, booking systems, business automations, prospecting workflows and digital design — so your business can look sharp, operate smart and grow without the manual grind.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#start" class="btn btn--primary magnetic js-open-modal" data-i18n="buttons.startProject">Start a Project
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#services" class="btn btn--ghost magnetic" data-i18n="buttons.exploreServices">Explore Services</a>
+      </div>
+      <div class="hero__meta reveal">
+        <span data-i18n="hero.metaWebsites">Websites</span><i aria-hidden="true"></i><span data-i18n="hero.metaBooking">Booking Systems</span><i aria-hidden="true"></i><span data-i18n="hero.metaAutomation">Automation</span><i aria-hidden="true"></i><span data-i18n="hero.metaProspecting">Prospecting</span><i aria-hidden="true"></i><span data-i18n="hero.metaDesign">Design</span>
+      </div>
+    </div>
+
+    <!-- Hero ecosystem visual -->
+    <div class="hero__visual reveal" aria-hidden="true">
+      <svg class="eco" viewBox="0 0 560 560" fill="none">
+        <defs>
+          <linearGradient id="ecoStroke" x1="0" y1="0" x2="560" y2="560">
+            <stop offset="0" stop-color="#4f7cff"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient>
+          <radialGradient id="ecoCore" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#8b5cf6" stop-opacity=".9"/><stop offset="1" stop-color="#0a0c14" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="ecoBlur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="10"/></filter>
+        </defs>
+        <circle cx="280" cy="280" r="230" stroke="#1c2130" stroke-width="1" stroke-dasharray="3 7"/>
+        <circle cx="280" cy="280" r="160" stroke="#1c2130" stroke-width="1"/>
+        <g class="eco__links" stroke="url(#ecoStroke)" stroke-width="1.2">
+          <line class="eco__link" x1="280" y1="280" x2="280" y2="70"/>
+          <line class="eco__link" x1="280" y1="280" x2="462" y2="177"/>
+          <line class="eco__link" x1="280" y1="280" x2="462" y2="383"/>
+          <line class="eco__link" x1="280" y1="280" x2="280" y2="490"/>
+          <line class="eco__link" x1="280" y1="280" x2="98"  y2="383"/>
+          <line class="eco__link" x1="280" y1="280" x2="98"  y2="177"/>
+        </g>
+        <g class="eco__pulses" fill="#22d3ee">
+          <circle class="eco__pulse" r="3"/>
+          <circle class="eco__pulse" r="3"/>
+          <circle class="eco__pulse" r="3"/>
+          <circle class="eco__pulse" r="3"/>
+          <circle class="eco__pulse" r="3"/>
+          <circle class="eco__pulse" r="3"/>
+        </g>
+        <circle cx="280" cy="280" r="120" fill="url(#ecoCore)" filter="url(#ecoBlur)"/>
+        <circle cx="280" cy="280" r="62" fill="#0b0e18" stroke="#2a3045" stroke-width="1.5"/>
+        <circle cx="280" cy="280" r="62" stroke="url(#ecoStroke)" stroke-width="1.5" class="eco__core-ring"/>
+        <text x="280" y="274" text-anchor="middle" class="eco__core-text">AKKOUS</text>
+        <text x="280" y="294" text-anchor="middle" class="eco__core-sub">STUDIO</text>
+        <!-- Nodes -->
+        <g class="eco__node" transform="translate(280 70)">
+          <rect x="-72" y="-30" width="144" height="60" rx="12" fill="#0b0e18" stroke="#232a3d"/>
+          <text x="0" y="-4" text-anchor="middle" class="eco__node-t">WEB</text>
+          <text x="0" y="16" text-anchor="middle" class="eco__node-s" data-i18n="eco.webSub">Sites &amp; landing pages</text>
+        </g>
+        <g class="eco__node" transform="translate(462 177)">
+          <rect x="-72" y="-30" width="144" height="60" rx="12" fill="#0b0e18" stroke="#232a3d"/>
+          <text x="0" y="-4" text-anchor="middle" class="eco__node-t">BOOKING</text>
+          <text x="0" y="16" text-anchor="middle" class="eco__node-s" data-i18n="eco.bookingSub">Reservation systems</text>
+        </g>
+        <g class="eco__node" transform="translate(462 383)">
+          <rect x="-72" y="-30" width="144" height="60" rx="12" fill="#0b0e18" stroke="#232a3d"/>
+          <text x="0" y="-4" text-anchor="middle" class="eco__node-t">AUTOMATION</text>
+          <text x="0" y="16" text-anchor="middle" class="eco__node-s" data-i18n="eco.autoSub">Connected workflows</text>
+        </g>
+        <g class="eco__node" transform="translate(280 490)">
+          <rect x="-72" y="-30" width="144" height="60" rx="12" fill="#0b0e18" stroke="#232a3d"/>
+          <text x="0" y="-4" text-anchor="middle" class="eco__node-t">PROSPECTING</text>
+          <text x="0" y="16" text-anchor="middle" class="eco__node-s" data-i18n="eco.prospSub">Find &amp; reach leads</text>
+        </g>
+        <g class="eco__node" transform="translate(98 383)">
+          <rect x="-72" y="-30" width="144" height="60" rx="12" fill="#0b0e18" stroke="#232a3d"/>
+          <text x="0" y="-4" text-anchor="middle" class="eco__node-t">DESIGN</text>
+          <text x="0" y="16" text-anchor="middle" class="eco__node-s" data-i18n="eco.designSub">Marketing &amp; visuals</text>
+        </g>
+        <g class="eco__node" transform="translate(98 177)">
+          <rect x="-72" y="-30" width="144" height="60" rx="12" fill="#0b0e18" stroke="#232a3d"/>
+          <text x="0" y="-4" text-anchor="middle" class="eco__node-t">SYSTEMS</text>
+          <text x="0" y="16" text-anchor="middle" class="eco__node-s" data-i18n="eco.sysSub">Custom business tools</text>
+        </g>
+      </svg>
+
+      <div class="chip chip--1 float" aria-hidden="true"><span class="chip__dot chip__dot--cyan"></span><span data-i18n="chips.workflow">Workflow live</span></div>
+      <div class="chip chip--2 float-alt" aria-hidden="true"><span class="chip__dot chip__dot--violet"></span><span data-i18n="chips.booking">Booking confirmed</span></div>
+      <div class="chip chip--3 float" aria-hidden="true"><span class="chip__dot chip__dot--blue"></span><span data-i18n="chips.deployed">Site deployed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span data-i18n="marquee.websites">Websites</span><i>✦</i>
+    <span data-i18n="marquee.bookingSystems">Booking Systems</span><i>✦</i>
+    <span data-i18n="marquee.automation">Automation</span><i>✦</i>
+    <span data-i18n="marquee.prospecting">Prospecting</span><i>✦</i>
+    <span data-i18n="marquee.digitalDesign">Digital Design</span><i>✦</i>
+    <span data-i18n="marquee.marketing">Marketing</span><i>✦</i>
+    <span data-i18n="marquee.websites">Websites</span><i>✦</i>
+    <span data-i18n="marquee.bookingSystems">Booking Systems</span><i>✦</i>
+    <span data-i18n="marquee.automation">Automation</span><i>✦</i>
+    <span data-i18n="marquee.prospecting">Prospecting</span><i>✦</i>
+    <span data-i18n="marquee.digitalDesign">Digital Design</span><i>✦</i>
+    <span data-i18n="marquee.marketing">Marketing</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="kicker" data-i18n="services.kicker">— Services</span>
+      <h2 class="section__title" data-i18n-content="services.title">Everything your business<br/>needs to <em>grow online.</em></h2>
+      <p class="section__text" data-i18n="services.intro">From a simple landing page to a fully automated business system — we design, build and connect the digital tools your company needs.</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <!-- SERVICE 01 — WEBSITE CREATION (large featured) -->
+      <article class="svc svc--featured reveal">
+        <div class="svc__num">01</div>
+        <div class="svc__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg>
+        </div>
+        <h3 data-i18n="services.website.title">Website Creation</h3>
+        <p data-i18n="services.website.desc">Professional websites, landing pages and business websites designed around your brand, your audience and your goals.</p>
+
+        <div class="svc__tiers" aria-label="Website service tiers" data-i18n-aria-label="services.website.tiersAria">
+          <div class="tier">
+            <span class="tier__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg>
+            </span>
+            <span class="tier__label" data-i18n="services.website.business">Business Website</span>
+            <span class="tier__desc" data-i18n="services.website.businessDesc">Your professional online presence</span>
+          </div>
+          <div class="tier">
+            <span class="tier__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M7 11v7M12 11v7"/></svg>
+            </span>
+            <span class="tier__label" data-i18n="services.website.landing">Landing Page</span>
+            <span class="tier__desc" data-i18n="services.website.landingDesc">High-converting offer pages</span>
+          </div>
+          <div class="tier">
+            <span class="tier__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </span>
+            <span class="tier__label" data-i18n="services.website.webApp">Advanced Web App</span>
+            <span class="tier__desc" data-i18n="services.website.webAppDesc">Dashboards, portals, smart forms &amp; logic</span>
+          </div>
+        </div>
+
+        <div class="svc__visual" aria-hidden="true">
+          <div class="svc__browser">
+            <div class="svc__browser-bar">
+              <i></i><i></i><i></i>
+              <span>travel-escape.com</span>
+            </div>
+            <div class="svc__browser-body">
+
+              <div class="travel-nav">
+                <div class="travel-logo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                  Travel Escape
+                </div>
+                <div class="travel-links">
+                  <span data-i18n="travel.destinations">Destinations</span><span data-i18n="travel.tours">Tours</span><span data-i18n="travel.contact">Contact</span>
+                </div>
+                <div class="travel-cta" data-i18n="travel.book">Book</div>
+              </div>
+
+              <div class="travel-hero">
+                <div class="travel-hero-tag"><i></i> <span data-i18n="travel.tag">Hand-picked journeys since 2012</span></div>
+                <div class="travel-hero-title" data-i18n-content="travel.title">Discover Your <em>Next Adventure</em></div>
+                <div class="travel-hero-sub" data-i18n="travel.sub">Carefully crafted escapes to the world's most beautiful places.</div>
+                <div class="travel-hero-btn">
+                  <span data-i18n="travel.explore">Explore Destinations</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+
+              <div class="travel-cards">
+                <div class="travel-card">
+                  <div class="travel-card-photo travel-card-photo--bali"></div>
+                  <div class="travel-card-body">
+                    <b>Bali</b>
+                    <small data-i18n="travel.bali">7 days · from €890</small>
+                  </div>
+                </div>
+                <div class="travel-card">
+                  <div class="travel-card-photo travel-card-photo--santorini"></div>
+                  <div class="travel-card-body">
+                    <b>Santorini</b>
+                    <small data-i18n="travel.santorini">5 days · from €740</small>
+                  </div>
+                </div>
+                <div class="travel-card">
+                  <div class="travel-card-photo travel-card-photo--alps"></div>
+                  <div class="travel-card-body">
+                    <b>Swiss Alps</b>
+                    <small data-i18n="travel.alps">4 days · from €520</small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <span class="svc__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      </article>
+
+      <!-- SERVICE 02 — BOOKING SYSTEMS -->
+      <article class="svc svc--booking reveal" data-accent="cyan" id="svc-booking">
+        <div class="svc__num">02</div>
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg></div>
+        <h3 data-i18n="services.booking.title">Booking Systems</h3>
+        <p data-i18n="services.booking.desc">Easy-to-use reservation systems that let your customers choose a service, date and time — while every booking is automatically organized.</p>
+
+        <div class="booking-demo" aria-label="Booking system demonstration" data-i18n-aria-label="services.booking.demoAria">
+          <div class="booking-form">
+            <div class="booking-form__header">
+              <span class="booking-form__title" data-i18n="booking.newBooking">New Booking</span>
+              <span class="booking-form__status"><i class="st st--new" aria-hidden="true"></i> <span data-i18n="booking.live">Live</span></span>
+            </div>
+            <div class="booking-field">
+              <label data-i18n="booking.date">Date</label>
+              <div class="booking-input">Sep 15, 2026</div>
+            </div>
+            <div class="booking-field">
+              <label data-i18n="booking.time">Time</label>
+              <div class="booking-input">10:30 AM</div>
+            </div>
+            <div class="booking-field">
+              <label data-i18n="booking.service">Service</label>
+              <div class="booking-input">Consultation</div>
+            </div>
+            <div class="booking-field">
+              <label data-i18n="booking.name">Name</label>
+              <div class="booking-input">Sarah M.</div>
+            </div>
+            <div class="booking-field">
+              <label data-i18n="booking.email">Email</label>
+              <div class="booking-input">sarah@company.com</div>
+            </div>
+            <button class="booking-confirm magnetic" type="button" data-i18n="booking.confirm">Confirm Booking</button>
+          </div>
+
+          <div class="booking-flow" aria-hidden="true">
+            <div class="flow-step flow-step--customer">
+              <span class="flow-step__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <span data-i18n="booking.customer">Customer</span>
+            </div>
+            <div class="flow-line"><i></i></div>
+            <div class="flow-step flow-step--form">
+              <span class="flow-step__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+              </span>
+              <span data-i18n="booking.bookingForm">Booking Form</span>
+            </div>
+            <div class="flow-line"><i></i></div>
+            <div class="flow-step flow-step--script">
+              <span class="flow-step__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+              </span>
+              <span data-i18n="booking.appsScript">Apps Script</span>
+            </div>
+            <div class="flow-line"><i></i></div>
+            <div class="flow-step flow-step--sheet">
+              <span class="flow-step__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+              </span>
+              <span data-i18n="booking.googleSheet">Google Sheet</span>
+            </div>
+            <div class="flow-line"><i></i></div>
+            <div class="flow-step flow-step--email">
+              <span class="flow-step__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              </span>
+              <span data-i18n="booking.emailNotification">Email Notification</span>
+            </div>
+          </div>
+
+          <div class="booking-sheet">
+            <div class="booking-sheet__header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+              <span data-i18n="booking.sheetTitle">Bookings — Google Sheet</span>
+            </div>
+            <div class="sheet-row sheet-row--head">
+              <span data-i18n="booking.colDate">Date</span><span data-i18n="booking.colTime">Time</span><span data-i18n="booking.colService">Service</span><span data-i18n="booking.colName">Name</span><span data-i18n="booking.colStatus">Status</span>
+            </div>
+            <div class="sheet-row">
+              <span>Sep 15</span><span>10:30</span><span>Consultation</span><span>Sarah M.</span><span class="st st--new" aria-label="New" data-i18n-aria-label="booking.statusNew"></span>
+            </div>
+            <div class="sheet-row">
+              <span>Sep 15</span><span>14:00</span><span>Audit</span><span>James L.</span><span class="st st--new" aria-label="New" data-i18n-aria-label="booking.statusNew"></span>
+            </div>
+            <div class="sheet-row sheet-row--dim">
+              <span>Sep 14</span><span>09:00</span><span>Consultation</span><span>Mike R.</span><span class="st st--qual" aria-label="Qualified" data-i18n-aria-label="booking.statusQualified"></span>
+            </div>
+          </div>
+        </div>
+        <span class="svc__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      </article>
+
+      <!-- SERVICE 03 — AUTOMATION -->
+      <article class="svc reveal" data-accent="violet">
+        <div class="svc__num">03</div>
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L10 22L19.5 10H13L13 2Z"/></svg></div>
+        <h3 data-i18n="services.automation.title">Business Automation</h3>
+        <p data-i18n="services.automation.desc">We automate repetitive tasks so your business can spend less time copying, checking and sending information manually.</p>
+        <div class="auto-flow" aria-label="Automation flow" data-i18n-aria-label="services.automation.flowAria">
+          <div class="auto-node" data-i18n="automation.form">Form</div>
+          <div class="auto-arrow"><i></i></div>
+          <div class="auto-node" data-i18n="automation.data">Data</div>
+          <div class="auto-arrow"><i></i></div>
+          <div class="auto-node" data-i18n="automation.email">Email</div>
+          <div class="auto-arrow"><i></i></div>
+          <div class="auto-node" data-i18n="automation.sheet">Sheet</div>
+          <div class="auto-arrow"><i></i></div>
+          <div class="auto-node auto-node--active" data-i18n="automation.action">Action</div>
+        </div>
+        <ul class="svc__benefits">
+          <li data-i18n="benefits.less">Less manual work</li>
+          <li data-i18n="benefits.fewer">Fewer missed steps</li>
+          <li data-i18n="benefits.better">Better organization</li>
+          <li data-i18n="benefits.moreTime">More time for real work</li>
+        </ul>
+        <span class="svc__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      </article>
+
+      <!-- SERVICE 04 — PROSPECTING AUTOMATION -->
+      <article class="svc reveal" data-accent="blue">
+        <div class="svc__num">04</div>
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <h3 data-i18n="services.prospecting.title">Prospecting Automation</h3>
+        <p data-i18n="services.prospecting.desc">Automatically find and organize potential customers, then run structured outreach workflows on a daily basis.</p>
+        <div class="pipeline-mini" aria-label="Prospecting pipeline" data-i18n-aria-label="services.prospecting.pipelineAria">
+          <div class="pipe-mini-step" data-status="new" data-i18n="prospecting.newProspect">New Prospect</div>
+          <div class="pipe-mini-step" data-status="new" data-i18n="prospecting.newProspect">New Prospect</div>
+          <div class="pipe-mini-step" data-status="qualified" data-i18n="prospecting.qualified">Qualified</div>
+          <div class="pipe-mini-step" data-status="sent" data-i18n="prospecting.offerSent">Offer Sent</div>
+          <div class="pipe-mini-step" data-status="follow" data-i18n="prospecting.followUp">Follow-up</div>
+        </div>
+        <span class="svc__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      </article>
+
+      <!-- SERVICE 05 — DIGITAL DESIGN & MARKETING -->
+      <article class="svc reveal" data-accent="cyan">
+        <div class="svc__num">05</div>
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3 data-i18n="services.design.title">Digital Design &amp; Marketing</h3>
+        <p data-i18n="services.design.desc">From your website to your marketing assets, we create a consistent, professional digital presence across every touchpoint.</p>
+        <div class="design-assets" aria-label="Design and marketing assets" data-i18n-aria-label="services.design.assetsAria">
+          <span class="design-tag" data-i18n="designTags.brand">Brand Identity</span>
+          <span class="design-tag" data-i18n="designTags.ads">Ad Creatives</span>
+          <span class="design-tag" data-i18n="designTags.catalogues">Catalogues</span>
+          <span class="design-tag" data-i18n="designTags.presentations">Presentations</span>
+          <span class="design-tag" data-i18n="designTags.social">Social Content</span>
+          <span class="design-tag" data-i18n="designTags.visual">Visual Design</span>
+          <span class="design-tag" data-i18n="designTags.campaign">Campaign Assets</span>
+        </div>
+        <span class="svc__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== START (CTA) ===================== -->
+<section class="cta" id="start">
+  <div class="cta__glow" aria-hidden="true"></div>
+  <canvas class="cta__particles" id="ctaParticles" aria-hidden="true"></canvas>
+  <div class="container cta__inner reveal">
+    <span class="kicker kicker--center" data-i18n="cta.kicker">— Start</span>
+    <h2 class="cta__title" data-i18n-content="cta.title">Have a project<br/>in <em>mind?</em></h2>
+    <p class="cta__text" data-i18n="cta.text">Tell us what you need — a website, booking system, automation, prospecting workflow or digital design project — and we'll turn it into a clear, working solution.</p>
+    <div class="cta__flow" aria-hidden="true">
+      <span class="cta__flow-step" data-i18n="cta.flowYou">You</span>
+      <span class="cta__flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="cta__flow-step cta__flow-step--idea" data-i18n="cta.flowIdea">Idea</span>
+      <span class="cta__flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="cta__flow-step cta__flow-step--akkous">AKKOUS</span>
+      <span class="cta__flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="cta__flow-step cta__flow-step--solution" data-i18n="cta.flowSolution">Digital Solution</span>
+    </div>
+    <div class="cta__actions">
+      <a href="#start" class="btn btn--primary btn--lg magnetic js-open-modal" data-i18n="buttons.startProject">Start a Project
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </a>
+      <a href="https://wa.me/48889271562" class="btn btn--ghost btn--lg magnetic" data-wa-cta target="_blank" rel="noopener noreferrer" data-i18n-title="whatsapp.tooltip" data-i18n="buttons.talkToAkkous">Talk to Akkous</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#top" class="nav__logo" aria-label="AKKOUS home" data-i18n-aria-label="nav.homeAria">AKKOUS<span class="nav__logo-dot">.</span></a>
+    <nav class="footer__links" aria-label="Footer navigation" data-i18n-aria-label="footer.navAria">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#start" data-i18n="nav.start">Start</a>
+    </nav>
+    <p class="footer__note" data-i18n="footer.note">Websites, automation, systems &amp; digital design.</p>
+  </div>
+</footer>
+
+<!-- PROJECT REQUEST MODAL -->
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal__backdrop" id="modalBackdrop"></div>
+  <div class="modal__container" role="document">
+    <button class="modal__close" id="modalClose" aria-label="Close dialog" data-i18n-aria-label="modal.closeAria">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+
+    <div class="modal__header" id="modalHeader">
+      <span class="kicker kicker--center" data-i18n="cta.kicker">— Start</span>
+      <h2 id="modalTitle" data-i18n="buttons.startProject">Start a Project</h2>
+      <p data-i18n="modal.subtitle">Tell us about your project and we'll get back to you soon.</p>
+    </div>
+
+    <form class="modal__form" id="projectForm" novalidate>
+      <div class="form-group">
+        <label for="formName" data-i18n="form.name">Full Name</label>
+        <input type="text" id="formName" name="name" placeholder="Full name" data-i18n-placeholder="form.namePlaceholder" required autocomplete="name" />
+        <span class="form-error" id="nameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="formEmail" data-i18n="form.email">Email Address</label>
+        <input type="email" id="formEmail" name="email" placeholder="client@email.com" data-i18n-placeholder="form.emailPlaceholder" required autocomplete="email" />
+        <span class="form-error" id="emailError"></span>
+      </div>
+      <div class="form-group">
+        <label for="formWhatsApp" data-i18n="form.whatsapp">WhatsApp Number</label>
+        <input type="tel" id="formWhatsApp" name="whatsapp" placeholder="+212 6 XX XX XX XX" data-i18n-placeholder="form.whatsappPlaceholder" required autocomplete="tel" />
+        <span class="form-error" id="whatsappError"></span>
+      </div>
+      <div class="form-group">
+        <label for="formDesc" data-i18n="form.description">Project Description</label>
+        <textarea id="formDesc" name="projectDescription" rows="5" placeholder="Describe your project and your needs..." data-i18n-placeholder="form.descPlaceholder" required></textarea>
+        <div class="form-meta">
+          <span class="form-error" id="descError"></span>
+          <span class="form-counter" id="charCounter">0 / 5000</span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--lg modal__submit" id="submitBtn">
+        <span class="modal__submit-text" data-i18n="form.submit">Send Request</span>
+        <span class="modal__submit-loading" data-i18n="form.submitting">Sending your request...</span>
+        <svg class="modal__submit-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+
+    <div class="modal__success" id="successMessage">
+      <div class="modal__success-icon">✓</div>
+      <h3 data-i18n="form.successTitle">Thank you!</h3>
+      <p data-i18n="form.successText">We have received your project details. A member of our team will contact you soon.</p>
+      <button class="btn btn--ghost modal__close-btn" id="successClose" data-i18n="form.close">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- JS Modules -->
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

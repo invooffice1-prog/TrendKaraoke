@@ -1,0 +1,231 @@
+/* ============================================================
+   AKKOUS — Services Section & Grid
+   ============================================================ */
+.services {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+
+.svc-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+}
+
+/* ---------- Service card base ---------- */
+.svc {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 34px 30px 30px;
+  transition: transform .45s var(--ease), border-color .45s, box-shadow .45s;
+  cursor: default;
+  grid-column: span 2;
+}
+.svc--featured {
+  grid-column: span 4;
+  grid-row: span 2;
+  padding: 44px 40px 36px;
+  display: flex;
+  flex-direction: column;
+}
+.svc--featured h3 { font-size: 30px; }
+.svc--featured p { font-size: 16px; max-width: 560px; }
+.svc--booking { grid-column: span 2; grid-row: span 2; padding: 40px 30px; }
+
+/* Accent hover states */
+.svc[data-accent="cyan"]:hover {
+  border-color: rgba(34,211,238,.45);
+  box-shadow: var(--shadow-card) var(--shadow-glow-cyan);
+}
+.svc[data-accent="violet"]:hover {
+  border-color: rgba(139,92,246,.45);
+  box-shadow: var(--shadow-card) var(--shadow-glow-violet);
+}
+.svc[data-accent="blue"]:hover,
+.svc--featured:hover {
+  border-color: rgba(79,124,255,.45);
+  box-shadow: var(--shadow-card) var(--shadow-glow-blue);
+}
+.svc:hover { transform: translateY(-5px); }
+
+/* Spotlight effect */
+.svc::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 0%),
+    rgba(99,102,241,.09),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity .4s;
+  pointer-events: none;
+}
+.svc:hover::before { opacity: 1; }
+
+/* Card internals */
+.svc__num {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--faint);
+  letter-spacing: .1em;
+}
+
+.svc__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--space-md);
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--line);
+  color: var(--cyan);
+  transition: transform .45s var(--ease), color .3s;
+}
+.svc__icon svg { width: 22px; height: 22px; }
+.svc[data-accent="violet"] .svc__icon { color: var(--violet); }
+.svc[data-accent="blue"] .svc__icon { color: var(--blue); }
+.svc:hover .svc__icon { transform: translateY(-3px) rotate(-4deg); }
+
+.svc h3 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+.svc p {
+  color: var(--muted);
+  font-size: 14.5px;
+  max-width: 400px;
+}
+
+.svc__arrow {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  transition: all .4s var(--ease);
+}
+.svc:hover .svc__arrow {
+  background: var(--grad);
+  border-color: transparent;
+  color: #fff;
+  transform: translate(3px, -3px);
+}
+
+/* ---------- Service tiers (Website Creation) ---------- */
+.svc__tiers {
+  margin-top: var(--space-lg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: none;
+}
+.tier {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  padding: 16px 17px;
+  background: rgba(255,255,255,.015);
+  transition: border-color .35s, background .35s, transform .35s var(--ease);
+}
+.tier:hover {
+  border-color: rgba(79,124,255,.45);
+  background: rgba(79,124,255,.05);
+  transform: translateY(-3px);
+}
+.tier__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--line);
+  color: var(--cyan);
+  margin-bottom: 6px;
+  transition: color .3s, transform .35s var(--ease);
+}
+.tier:nth-child(2) .tier__icon { color: var(--violet); }
+.tier:nth-child(3) .tier__icon { color: var(--blue); }
+.tier:hover .tier__icon { transform: translateY(-2px) rotate(-4deg); }
+.tier__icon svg { width: 17px; height: 17px; }
+.tier__label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+}
+.tier__desc {
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+/* ---------- Featured website preview ---------- */
+.svc__visual {
+  margin-top: auto;
+  padding-top: var(--space-lg);
+  flex: 1;
+  display: flex;
+  min-height: 280px;
+}
+.svc__browser {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.svc__browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--bg-2);
+}
+.svc__browser-bar i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+}
+.svc__browser-bar span {
+  margin-left: 10px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--faint);
+}
+.svc__browser-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  background:
+    radial-gradient(560px 240px at 18% -10%, rgba(79,124,255,.16), transparent 65%),
+    radial-gradient(520px 260px at 100% 30%, rgba(139,92,246,.14), transparent 65%),
+    #0a0d16;
+}

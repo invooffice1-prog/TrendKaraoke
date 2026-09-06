@@ -1,0 +1,314 @@
+/* ============================================================
+   AKKOUS — Project Request Modal
+   ============================================================ */
+
+/* ---- Overlay ---- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .35s var(--ease), visibility 0s linear .35s;
+}
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity .35s var(--ease), visibility 0s;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5,6,10,.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* ---- Container ---- */
+.modal__container {
+  position: relative;
+  z-index: 1;
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100svh - 48px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 40px 40px 36px;
+  box-shadow: 0 32px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(79,124,255,.06);
+  transform: scale(.95) translateY(12px);
+  transition: transform .35s var(--ease);
+}
+.modal.open .modal__container {
+  transform: scale(1) translateY(0);
+}
+
+/* ---- Close button ---- */
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--faint);
+  cursor: pointer;
+  transition: color .25s, border-color .25s, background .25s;
+}
+.modal__close:hover {
+  color: var(--text);
+  border-color: var(--line);
+  background: var(--surface);
+}
+
+/* ---- Header ---- */
+.modal__header {
+  margin-bottom: 28px;
+}
+.modal__header .kicker {
+  margin-bottom: 8px;
+}
+.modal__header h2 {
+  margin: 0 0 6px;
+  font-size: clamp(1.4rem, 3.5vw, 1.65rem);
+}
+.modal__header p {
+  margin: 0;
+  color: var(--faint);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* ---- Form ---- */
+.modal__form {
+  display: grid;
+  gap: 18px;
+}
+
+/* ---- Form groups ---- */
+.form-group {
+  display: grid;
+  gap: 6px;
+}
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  font-weight: 500;
+}
+
+/* ---- Inputs / Textarea ---- */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.5;
+  transition: border-color .3s, box-shadow .3s;
+  outline: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--faint);
+  opacity: .7;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(79,124,255,.6);
+  box-shadow: 0 0 0 3px rgba(79,124,255,.12);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* ---- Error state ---- */
+.form-group.error input,
+.form-group.error textarea {
+  border-color: rgba(248,113,113,.6);
+  box-shadow: 0 0 0 3px rgba(248,113,113,.1);
+}
+.form-error {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #f87171;
+  min-height: 0;
+  line-height: 1.4;
+}
+
+/* ---- Meta row (error + counter) ---- */
+.form-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 0;
+}
+.form-meta .form-error {
+  flex: 1;
+}
+.form-counter {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--faint);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- Submit button ---- */
+.modal__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+.modal__submit-loading {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+.modal__submit-loading::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.modal__submit.loading .modal__submit-text,
+.modal__submit.loading .modal__submit-arrow {
+  display: none;
+}
+.modal__submit.loading .modal__submit-loading {
+  display: inline-flex;
+}
+.modal__submit:disabled {
+  opacity: .6;
+  pointer-events: none;
+}
+
+/* ---- Success state ---- */
+.modal__success {
+  display: none;
+  text-align: center;
+  padding: 24px 0 8px;
+}
+.modal__success.show {
+  display: block;
+}
+.modal__success-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: rgba(34,197,94,.12);
+  border: 1px solid rgba(34,197,94,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #22c55e;
+}
+.modal__success h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+.modal__success p {
+  margin: 0 0 24px;
+  color: var(--faint);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.modal__success .modal__close-btn {
+  margin: 0 auto;
+}
+
+/* ---- Hidden state ---- */
+.modal__form.hidden,
+.modal__header.hidden {
+  display: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .modal__container {
+    padding: 28px 22px 24px;
+    border-radius: var(--radius);
+  }
+  .modal__close {
+    top: 12px;
+    right: 12px;
+  }
+}
+
+/* ============================================================
+   Custom scrollbar — scoped to the modal container only
+   (the only scrollable zone: overflow-y: auto)
+   ============================================================ */
+
+/* ---- Firefox ---- */
+.modal__container {
+  scrollbar-width: thin;
+  scrollbar-color: #3f5f9e rgba(255,255,255,.04);
+}
+
+/* ---- WebKit / Blink (Chrome, Edge, Safari) ---- */
+.modal__container::-webkit-scrollbar {
+  width: 10px;
+}
+.modal__container::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 99px;
+}
+.modal__container::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.modal__container::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Thumb — dark with a subtle blue → cyan gradient */
+.modal__container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(79,124,255,.55), rgba(34,211,238,.45));
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 99px;
+  transition: background .25s var(--ease), box-shadow .25s var(--ease);
+}
+
+/* Hover — lighter gradient + cyan glow */
+.modal__container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6a92ff, #3ae0f5);
+  background-clip: padding-box;
+  box-shadow: 0 0 10px rgba(34,211,238,.45);
+}
+
+/* Active — pressed */
+.modal__container::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #7fa3ff, #4de6fa);
+  background-clip: padding-box;
+  box-shadow: 0 0 12px rgba(79,124,255,.55);
+}
